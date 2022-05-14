@@ -57,8 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\playerMovement.cs" />
-    <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Inventory\FelszerelesSlot.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Loot\Loot.cs" />
+    <Compile Include="Assets\Scripts\UIScript\OneWaySlot.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Readsign.cs" />
+    <Compile Include="Assets\Scripts\UIScript\ViewPlayer.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Inventory\FelszerelesFe.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Inventory\Felszereles.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Equipment\Targy.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Loot\LootFe.cs" />
+    <Compile Include="Assets\Scripts\UIScript\open.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Equipment\Equipment.cs" />
+    <Compile Include="Assets\Scripts\UIScript\Equipment\FelszerelhetoTargy.cs" />
+    <Compile Include="Assets\Scripts\InvOpener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -743,6 +756,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="goodcat.un-inventory.standard.csproj">
+      <Project>{8C46EC7F-DD12-2B05-FB6C-D2CB4E36AB9E}</Project>
+      <Name>goodcat.un-inventory.standard</Name>
+    </ProjectReference>
+    <ProjectReference Include="sample.hero.csproj">
+      <Project>{E4D7D6F3-1BBF-3BEB-F573-12869501E2D0}</Project>
+      <Name>sample.hero</Name>
+    </ProjectReference>
+    <ProjectReference Include="goodcat.un-inventory.plugins.standard.csproj">
+      <Project>{1F9BDFF2-CCFF-C39E-6D76-11C90C976F4B}</Project>
+      <Name>goodcat.un-inventory.plugins.standard</Name>
+    </ProjectReference>
+    <ProjectReference Include="goodcat.un-inventory.core.csproj">
+      <Project>{82D4E662-EC84-BF59-CDA9-3E7BC4DFA0AB}</Project>
+      <Name>goodcat.un-inventory.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="samples-environment.csproj">
+      <Project>{7E0C0A6A-2A8B-9CFD-E865-C72DA0EBBCF2}</Project>
+      <Name>samples-environment</Name>
+    </ProjectReference>
+    <ProjectReference Include="sample.trade.csproj">
+      <Project>{8DD9D79C-F699-7769-8421-B04627CFAEE8}</Project>
+      <Name>sample.trade</Name>
+    </ProjectReference>
+    <ProjectReference Include="goodcat.un-inventory.editor.csproj">
+      <Project>{6D34A38A-65EC-0024-9317-E965B1B41038}</Project>
+      <Name>goodcat.un-inventory.editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
