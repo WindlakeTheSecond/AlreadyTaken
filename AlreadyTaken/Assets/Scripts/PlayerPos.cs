@@ -7,13 +7,13 @@ public class PlayerPos : MonoBehaviour
     public GameObject playerPos;
     public GameObject transformPos;
 
-
     void Start()
     {
         if (PlayerPrefs.GetInt("Saved") == 1 && PlayerPrefs.GetInt("TimeToLoad") == 1)
         {
             float pX = playerPos.transform.position.x;
             float pY = playerPos.transform.position.y;
+
 
             pX = PlayerPrefs.GetFloat("p_x");
             pY = PlayerPrefs.GetFloat("p_y");

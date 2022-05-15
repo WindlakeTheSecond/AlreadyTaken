@@ -537,8 +537,8 @@ Canvas:
   m_GameObject: {fileID: 193673292}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 2134994771}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a179119142fde5a47addda6d69a5036a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1842578431}
+  transition: {fileID: 1606433382}
   transitionTime: 1
   mainMenu: {fileID: 1343962418}
   optionsMenu: {fileID: 845418500}
@@ -2092,7 +2092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 205, y: -10}
+  m_AnchoredPosition: {x: 180, y: 1}
   m_SizeDelta: {x: 344.6699, y: 258.3158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845418502
@@ -2552,7 +2552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 162}
+  m_AnchoredPosition: {x: -1, y: 179}
   m_SizeDelta: {x: 380.181, y: 54.1185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951025821
@@ -3271,7 +3271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 205, y: -10}
+  m_AnchoredPosition: {x: 180, y: 1}
   m_SizeDelta: {x: 344.6699, y: 258.3158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1343962422
@@ -3316,7 +3316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -130, y: 49.8}
+  m_AnchoredPosition: {x: -130.00002, y: 49.800003}
   m_SizeDelta: {x: -291.4201, y: -239.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409415099
@@ -3752,6 +3752,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596412883}
   m_CullTransparentMesh: 1
+--- !u!1 &1606433377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1105530325650890730, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
+  m_PrefabInstance: {fileID: 8946289452311152266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1606433382
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606433377}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51568ada1e33f37479a0f048b43de3e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1780204651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3973,11 +3997,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
---- !u!95 &1842578431 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7750477859274907157, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
-  m_PrefabInstance: {fileID: 8946289452311152266}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2065336026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,6 +4127,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2318429072964060565, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2134994771}
+    - target: {fileID: 2318429072964060565, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2553054569769129072, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
       propertyPath: m_Alpha
       value: 1
@@ -4162,7 +4189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9213749367678732917, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}

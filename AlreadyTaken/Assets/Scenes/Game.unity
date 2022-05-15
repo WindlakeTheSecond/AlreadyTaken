@@ -13027,7 +13027,7 @@ MonoBehaviour:
   combatZone:
     serializedVersion: 2
     m_Bits: 128
-  transition: {fileID: 518438737}
+  transition: {fileID: 518438738}
   transitionTime: 0
   canMove: 0
 --- !u!212 &135858261
@@ -13070,12 +13070,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3277881244731416683, guid: 44c6c5c7abd8b114db2d0e661e541c94, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d340edd390851848ab6a13ff909619e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -13090,7 +13090,7 @@ Transform:
   m_GameObject: {fileID: 135858259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4156766, y: 1.7023215, z: 1}
   m_Children:
   - {fileID: 348231097}
   m_Father: {fileID: 0}
@@ -13137,9 +13137,17 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2318429072964060565, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 2318429072964060565, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7745384534593938682, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7745384534593938682, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13191,11 +13199,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
---- !u!95 &518438737 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7750477859274907157, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
+--- !u!1 &518438737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1105530325650890730, guid: ef3c95c360cd1114a839652e6842ad1f, type: 3}
   m_PrefabInstance: {fileID: 518438736}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &518438738
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518438737}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51568ada1e33f37479a0f048b43de3e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -13263,7 +13290,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.45
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13373,7 +13400,7 @@ GameObject:
   - component: {fileID: 1095350260}
   - component: {fileID: 1095350264}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13428,8 +13455,8 @@ Canvas:
   m_GameObject: {fileID: 1095350259}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -13438,7 +13465,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_TargetDisplay: 0
 --- !u!224 &1095350263
 RectTransform:
@@ -13453,7 +13480,7 @@ RectTransform:
   m_Children:
   - {fileID: 1720250781}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13473,7 +13500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1720250777}
-  transition: {fileID: 518438737}
+  transition: {fileID: 518438738}
   transitionTime: 1
 --- !u!1 &1186662991
 GameObject:
@@ -16266,7 +16293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2063273364
 GameObject:

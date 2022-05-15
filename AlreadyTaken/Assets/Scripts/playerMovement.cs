@@ -10,7 +10,6 @@ public class playerMovement : MonoBehaviour
     public Transform movePoint;
     public LayerMask whatStopsMovement;
     public LayerMask combatZone;
-    private int combatGrace = 0;
     private int combatRandom = 0;
     public Animator transition;
     public float transitionTime = 1f;
@@ -18,6 +17,7 @@ public class playerMovement : MonoBehaviour
 
     PlayerPos playerPosData;
     // Start is called before the first frame update
+    
     void Start()
     {
         transform.position = new Vector3(-0.5f, 0.5f, 0f);
@@ -34,6 +34,10 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(1 > Time.timeScale)
+        {
+            canMove = false;
+        }
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
         if(Vector3.Distance(transform.position, movePoint.position) <= .05f)
@@ -46,17 +50,14 @@ public class playerMovement : MonoBehaviour
                 {
                     //random szám 0 és 100 között
                     combatRandom = Random.Range(0, 100);
-                    combatGrace--;
                     //Ha igen akkor adunk a játékosnak 10 lépést amíg biztos nem léphet combatba
-                    if (10 >= combatRandom  && combatGrace <= 0)
+                    if (10 >= combatRandom)
                     {
                         canMove = false;
                         playerPosData = FindObjectOfType<PlayerPos>();
                         playerPosData.PlayerPosSave();
-                        combatGrace = 10;
                         StartCoroutine(LoadLevel(2));
                     }
-                    Debug.Log("AfterCombatGrace: " + combatGrace);
                 }
                 //collision detection
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.35f, whatStopsMovement) && canMove)
@@ -70,18 +71,14 @@ public class playerMovement : MonoBehaviour
                 {
                     //random szám 0 és 100 között
                     combatRandom = Random.Range(0, 100);
-                    combatGrace--;
                     //Ha igen akkor adunk a játékosnak 10 lépést amíg biztos nem léphet combatba
-                    if (10 >= combatRandom && combatGrace <= 0)
-                    {
+                    if (10 >= combatRandom)
+                    {   
                         canMove = false;
                         playerPosData = FindObjectOfType<PlayerPos>();
                         playerPosData.PlayerPosSave();
-                        combatGrace = 10;
                         StartCoroutine(LoadLevel(2));
                     }
-                        
-                    Debug.Log("AfterCombatGrace: " + combatGrace);
                 }
                 //collision detection
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), 0.35f, whatStopsMovement) && canMove)
@@ -100,7 +97,6 @@ public class playerMovement : MonoBehaviour
 
         SceneManager.LoadScene(LevelIndex);
     }
-
 
 }
 
