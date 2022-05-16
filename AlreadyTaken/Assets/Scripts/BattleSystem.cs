@@ -14,6 +14,8 @@ public class BattleSystem : MonoBehaviour
     public Transform playerBS;
     public Transform enemyBS;
 
+    public AudioSource AS;
+
     EnemyUnit playerUnit;
     EnemyUnit enemyUnit;
 
@@ -37,6 +39,8 @@ public class BattleSystem : MonoBehaviour
 
         GameObject enemyGO = Instantiate(enemy, enemyBS);
         enemyUnit = enemyGO.GetComponent<EnemyUnit>();
+
+        AS = GetComponent<AudioSource>();
 
         dialogueText.text = "You've been attack by " + enemyUnit.enemyName + "!";
         playerHUD.setHUD(playerUnit);
@@ -68,6 +72,8 @@ public class BattleSystem : MonoBehaviour
     {
         dialogueText.text = enemyUnit.enemyName + " attacks!";
 
+        AS.Play(44100);
+        
         yield return new WaitForSeconds(1f);
 
         bool isDead = playerUnit.takeDamage(enemyUnit.damage);
