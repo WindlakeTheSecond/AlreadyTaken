@@ -15,13 +15,23 @@ public class playerMovement : MonoBehaviour
     public float transitionTime = 1f;
     public bool canMove;
 
+    public GameObject playerCh;
+    public SpriteRenderer playerSprite;
+    public Sprite[] direction;
+
     PlayerPos playerPosData;
     // Start is called before the first frame update
     
+    void ChangeSprite(int i)
+    {
+        playerSprite.sprite = direction[i];
+    }
+
     void Start()
     {
-        transform.position = new Vector3(-0.5f, 0.5f, 0f);
+        transform.position = new Vector3(-3.5f, 0.5f, 0f);
         movePoint.parent = null;
+        playerSprite = playerCh.GetComponent<SpriteRenderer>();
     }
 
     private void Awake()
@@ -34,7 +44,19 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(1 > Time.timeScale)
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
+            ChangeSprite(3);
+        }
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
+            ChangeSprite(2);
+        }
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
+            ChangeSprite(0);
+        }
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
+            ChangeSprite(1);
+        }
+        if (1 > Time.timeScale)
         {
             canMove = false;
         }

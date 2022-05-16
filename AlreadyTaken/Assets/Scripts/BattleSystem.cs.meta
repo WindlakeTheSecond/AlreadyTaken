@@ -3,7 +3,15 @@ guid: a6a37293623d9234fa582e14b8090b26
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {fileID: 1813630701475802651, guid: 1760c2f6b167f3d43a4f9eaf81f2ca51, type: 3}
+  - enemy: {fileID: 6369407302584023423, guid: 7e22f817b749c284cb8de8f8d69490e0, type: 3}
+  - playerBS: {instanceID: 0}
+  - enemyBS: {instanceID: 0}
+  - dialogueText: {instanceID: 0}
+  - playerHUD: {instanceID: 0}
+  - enemyHUD: {instanceID: 0}
+  - transition: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
